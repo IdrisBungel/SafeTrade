@@ -1,0 +1,104 @@
+/* Adjust navbar link spacing */
+.navbar-nav .nav-link {
+    margin-right: 20px; /* Adjust this as needed */
+  }
+  
+  /* Center SafeTrade and padding */
+  .navbar-brand {
+    padding-left: 20px; /* Adjust for logo padding */
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  /* Button styling remains the same */
+  .navbar .btn-outline-light:hover {
+    background-color: white;
+    color: #d9534f;
+  }
+  
+  .navbar .btn-light:hover {
+    background-color: #c9302c; /* Darker red on hover */
+    color: white;
+  }
+
+  /* Hero Section Styles */
+.hero-section {
+    background-color: #f56c6c;  /* Light red background */
+    height: 500px;
+    padding: 100px 0;
+  }
+  
+  .hero-title {
+    color: white;
+    font-size: 48px;
+  }
+  
+  .hero-text {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .hero-btn {
+    margin-top: 20px;
+  }
+
+/* About Section Styling */
+.about-section {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 60px 0;
+  }
+  
+  .about-title {
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333; /* Darker text for readability */
+    margin-bottom: 20px;
+  }
+  
+  .about-images {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .about-image {
+    width: 48%;  /* Adjust width to ensure both images fit side by side */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* About Section with Two Cards */
+.about-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    margin-bottom: 20px;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+  }
+  
+ 
+ /* Service Card Styles */
+.service-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+  }
+  
+  .service-icon {
+    color: #f56c6c; /* Light red color for consistency */
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
