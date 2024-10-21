@@ -4,7 +4,7 @@ import HeroSection from './components/HeroSection';  // Your HeroSection compone
 import About from './components/About';  // About Us section component
 import Services from './components/Services';  // Services section component
 import Contact from './components/Contact';  // Contact section component
-// import Footer from './componentsFooter';  // Footer component
+import Footer from './components/Footer';  // Footer component
 
 function HomePage() {
   return (
@@ -22,7 +22,7 @@ function HomePage() {
       <div id="contact">
         <Contact />
       </div>
-      {/* <Footer /> */}
+      { <Footer /> }
     </div>
   );
 }
