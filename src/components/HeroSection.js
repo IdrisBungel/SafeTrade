@@ -5,15 +5,14 @@ function HeroSection() {
   return (
     <div className="hero-section">
       <Container>
-        <Row>
-          <Col md={6} className="my-auto">
-            <h1 className="hero-title">Welcome to SafeTrade</h1>
-            <p className="hero-text">Your trusted platform for secure transactions.</p>
-            <Button variant="light" href="#services" className="hero-btn">Get Started</Button>
-          </Col>
+        <Row className="align-items-center">
           <Col md={6}>
-            {/* Uncomment this section and add your image later */}
-            {/* <img src="path-to-your-image.jpg" alt="Hero Image" className="img-fluid" /> */}
+            <h1 className="hero-title">Welcome to SafeTrade</h1>
+            <p className="hero-subtitle">Your trusted platform for secure transactions.</p>
+            <Button variant="light" href="#signup" className="hero-btn">Get Started</Button>
+          </Col>
+          <Col md={6} className="text-center">
+            {/* Optionally, we can add an image representing trust, security, or transactions */}
           </Col>
         </Row>
       </Container>

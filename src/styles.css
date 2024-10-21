@@ -1,104 +1,325 @@
-/* Adjust navbar link spacing */
-.navbar-nav .nav-link {
-    margin-right: 20px; /* Adjust this as needed */
-  }
-  
-  /* Center SafeTrade and padding */
-  .navbar-brand {
-    padding-left: 20px; /* Adjust for logo padding */
-    font-family: 'Helvetica Neue', sans-serif;
-  }
-  
-  /* Button styling remains the same */
-  .navbar .btn-outline-light:hover {
-    background-color: white;
-    color: #d9534f;
-  }
-  
-  .navbar .btn-light:hover {
-    background-color: #c9302c; /* Darker red on hover */
-    color: white;
+/* Body Background */
+body {
+  background: linear-gradient(to bottom, #f56c6c, #f0f0f0);
+  background-attachment: fixed;  /* Ensures background stays fixed on scroll */
+}
+/* Global CSS file (e.g., styles.css or index.css) */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Constrain Logo Size */
+.logo-img {
+  max-height: 60px;  /* Limit logo height */
+  height: auto;
+  width: auto;
+}
+
+/* Header Styling */
+.header-navbar {
+  background-color: #333;  /* Darker background for the header */
+  padding: 2px 0;  /* Reduce padding to manage header height */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  transition: all 0.3s ease-in-out;
+}
+
+.header-navbar.sticky {
+  padding: 8px 0;  /* Reduce padding slightly on scroll */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  /* Add shadow on scroll */
+  background-color: #333;  /* Solid background when sticky */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Navbar Links */
+.header-link {
+  color: white;
+  margin-right: 15px;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;  /* Smooth transition on hover */
+}
+
+.header-link:hover {
+  color: #f56c6c;  /* Hover color matches theme */
+}
+
+/* Active Link Styling */
+.navbar-nav .nav-link.active {
+  color: #f56c6c;
+  font-weight: bold;
+  border-bottom: 2px solid #f56c6c;  /* Underline for active link */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f56c6c;  /* Hover effect for nav links */
+  font-weight: 500;  /* Optional font-weight change */
+}
+
+/* Buttons in the Navbar */
+.navbar .btn-outline-primary {
+  border: 2px solid #f56c6c;
+  color: #f56c6c;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar .btn-outline-primary:hover {
+  background-color: #f56c6c;
+  color: white;
+}
+
+.navbar .btn-primary {
+  background-color: #e05353;  /* Slightly darker red for the 'Login' button */
+  border-color: #e05353;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #e05353;  /* Darker red on hover */
+  color: white;
+}
+
+/* Change the Hamburger Icon Color */
+.navbar-toggler {
+  color: white;
+  border-color: white;
+  padding: 8px 10px;  /* Add padding around the hamburger icon */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Mobile Button Layout */
+@media (max-width: 768px) {
+  .navbar .btn {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
-  /* Hero Section Styles */
+  .navbar .btn-outline-primary,
+  .navbar .btn-primary {
+    text-align: center;
+  }
+
+  /* Reduce font size for mobile nav links */
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+  }
+
+  /* Reduce padding for mobile header */
+  .header-navbar {
+    padding: 5px 0;
+    background-color: #282828;  /* Darker background for mobile */
+  }
+}
+/* Hero Section Styling */
 .hero-section {
-    background-color: #f56c6c;  /* Light red background */
-    height: 500px;
-    padding: 100px 0;
+  background: linear-gradient(to bottom, #f56c6c, #e05353);  /* Gradient background */
+  color: white;
+  padding: 100px 0;
+  height: 80vh;  /* Adjust height for desktop */
+  display: flex;
+  align-items: center;
+}
+
+
+.hero-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);  /* Adds a slight shadow for readability */
+}
+
+.hero-btn {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  background-color: white;
+  color: #f56c6c;
+  border: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: #f56c6c;
+  color: white;
+}
+
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 0;
+    height: 60vh;  /* Reduce height for mobile */
   }
-  
+
   .hero-title {
-    color: white;
-    font-size: 48px;
+    font-size: 2.5rem;  /* Smaller font size for mobile */
   }
-  
-  .hero-text {
-    color: white;
-    font-size: 20px;
+
+  .hero-subtitle {
+    font-size: 1.2rem;  /* Adjust subtitle size */
   }
-  
+
   .hero-btn {
-    margin-top: 20px;
+    font-size: 1rem;
+    padding: 8px 25px;
   }
+}
+.hero-section {
+  background: linear-gradient(rgba(245, 108, 108, 0.8), rgba(224, 83, 83, 0.4)), 
+              url('./assets/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 0;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+/* .hero-section {
+  background: url('./assets/hero-bg.jpg') center/cover no-repeat, linear-gradient(to bottom, #f56c6c, #e05353); 
+  color: white;
+  padding: 100px 0;
+  height: 80vh;
+} */
+
 
 /* About Section Styling */
 .about-section {
-    background-color: #f5f5f5; /* Light gray background */
-    padding: 60px 0;
-  }
-  
+  background-color: #f5f5f5;  /* Light gray background */
+  padding: 60px 0;
+}
+
+/* Header styling with more prominence */
+.about-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;  /* Slightly larger */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Text styling with highlighted key phrases */
+.about-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Highlight important phrases */
+.highlight-text {
+  font-weight: 600;
+  color: #f56c6c;  /* SafeTrade's red color */
+}
+
+/* Image container and layout */
+.about-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Styling for images with hover effect */
+.about-image {
+  width: 48%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for images */
+.about-image:hover {
+  transform: scale(1.05);  /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Increased shadow on hover */
+}
+
+/* General Mobile Adjustments */
+@media (max-width: 768px) {
+  /* Adjust header size */
   .about-title {
-    font-family: 'Roboto', sans-serif; /* Clean and modern font */
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  .about-text {
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333; /* Darker text for readability */
-    margin-bottom: 20px;
-  }
-  
-  .about-images {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .about-image {
-    width: 48%;  /* Adjust width to ensure both images fit side by side */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.8rem;  /* Even smaller header size for mobile */
+    margin-bottom: 10px;  /* Less margin */
   }
 
-  /* About Section with Two Cards */
-.about-card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: none;
-    margin-bottom: 20px;
+  /* Smaller text size and tighter line height */
+  .about-text {
+    font-size: 1.1rem;  /* Smaller body text */
+    line-height: 1.4;   /* Tighter text */
+    margin-bottom: 25px;  /* Reduce text margin */
   }
-  
-  .about-card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+
+  /* Image container for mobile with side-by-side layout */
+  .about-images {
+    display: flex;
+    flex-direction: row;  /* Keep the images in a row */
+    justify-content: space-between;  /* Space between the images */
+    gap: 10px;  /* Smaller gap between images */
   }
-  
- 
- /* Service Card Styles */
+
+  /* Smaller images with more compact layout */
+  .about-image {
+    width: 48%;  /* Make the images smaller but side by side */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);  /* Lighter shadow for mobile */
+  }
+
+  /* Compact padding to reduce white space */
+  .about-section {
+    padding: 30px 10px;  /* Even smaller padding for compact layout */
+  }
+}
+
+/* Services Section Styling */
+.services-section {
+  background-color: #fff;  /* White background for clean contrast */
+  padding: 60px 0;
+}
+
+/* Service card styling */
 .service-card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: none;
+  border: none;
+  background-color: #f5f5f5;  /* Light gray background for cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);  /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Increase shadow on hover */
+}
+
+/* Icon styling */
+.service-icon {
+  font-size: 3rem;  /* Larger icon size */
+  color: #f56c6c;  /* SafeTrade red color for icons */
+  margin-bottom: 15px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 20px;  /* Smaller padding for mobile */
   }
-  
-  .service-card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+
+  .service-card {
+    margin-bottom: 20px;  /* Add space between cards on mobile */
   }
-  
+
   .service-icon {
-    color: #f56c6c; /* Light red color for consistency */
-    font-size: 40px;
-    margin-bottom: 15px;
+    font-size: 2.5rem;  /* Smaller icon size for mobile */
   }
+}
