@@ -1,4 +1,3 @@
-
 /* Global CSS file (e.g., styles.css or index.css) */
 html {
   scroll-behavior: smooth;
@@ -78,11 +77,21 @@ html {
   color: white;
 }
 
-/* Change the Hamburger Icon Color */
+/* Hamburger Icon Hover and Focus */
 .navbar-toggler {
   color: white;
   border-color: white;
-  padding: 8px 10px;  /* Add padding around the hamburger icon */
+  padding: 8px 10px;
+}
+
+.navbar-toggler:hover {
+  background-color: #f56c6c;  /* Red background on hover */
+  border-color: #f56c6c;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(245, 108, 108, 0.8);  /* Add custom shadow */
 }
 
 .navbar-toggler-icon {
@@ -112,6 +121,7 @@ html {
     background-color: #282828;  /* Darker background for mobile */
   }
 }
+
 /* Hero Section Styling */
 .hero-section {
   background: linear-gradient(to bottom, #f56c6c, #e05353);  /* Gradient background */
@@ -293,7 +303,6 @@ html {
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Button shadow on hover */
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-section {
@@ -428,8 +437,6 @@ html {
   }
 }
 
-
-
 /* Custom Modal Styling */
 .custom-modal .modal-dialog {
   max-width: 400px;
@@ -517,16 +524,6 @@ button.btn-outline-danger:hover {
   border-color: #444;
 }
 
-/* Remove red on active state */
-.centered-button:active,
-.centered-button:focus {
-  background-color: #444;  /* Keep the hover background when clicked */
-  border-color: #444;
-  color: white;
-  outline: none;  /* Remove default focus outline */
-  box-shadow: none;  /* Remove default box shadow that might be causing red appearance */
-}
-
 
 /* Mobile Responsive Styling */
 @media (max-width: 768px) {
@@ -544,4 +541,86 @@ button.btn-outline-danger:hover {
     max-width: 100%;  /* Full-width button for mobile */
     margin-bottom: 25px;  /* Increase the margin-bottom on mobile */
   }
+}
+
+
+
+/* Container for the signup form */
+/* Signup Form Container */
+.signup-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Two-column form layout for larger screens */
+.signup-form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-form-col {
+  flex: 0 0 48%;
+}
+
+/* Input fields with icons */
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+  .signup-form-row {
+    display: block;
+  }
+
+  .signup-form-col {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Form styling */
+.signup-container h2 {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.signup-container .form-control {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.signup-container .form-label {
+  color: #555;
+}
+
+.signup-container .btn-primary {
+  background-color: #333;
+  border-color: #333;
+}
+
+.signup-container .btn-primary:hover {
+  background-color: #555;
+  border-color: #555;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
 }

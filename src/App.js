@@ -1,30 +1,17 @@
 import React from 'react';
-import Header from './components/Header';  // Your existing Header component
-import HeroSection from './components/HeroSection';  // Your HeroSection component
-import About from './components/About';  // About Us section component
-import Services from './components/Services';  // Services section component
-import Contact from './components/Contact';  // Contact section component
-import Footer from './components/Footer';  // Footer component
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import SignupPage from './components/SignupPage';
 
-function HomePage() {
+function App() {
   return (
-    <div>
-      <Header />
-      <div id="home">
-        <HeroSection />
-      </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="services">
-        <Services />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
-      { <Footer /> }
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/signup" element={<SignupPage />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default HomePage;
+export default App;
