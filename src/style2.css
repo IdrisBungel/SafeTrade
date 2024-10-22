@@ -1,0 +1,151 @@
+/* About Section Styling without images */
+.about-section {
+    background-color: #f5f5f5;  /* Light background to maintain contrast */
+    padding: 60px 0;
+  }
+  
+  .about-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  
+
+
+
+/* About Section Styling */
+
+.about-section {
+    background-color: #f5f5f5;  /* Light gray background */
+    padding: 60px 0;
+  }
+  
+  /* Header styling with more prominence */
+  .about-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;  /* Slightly larger */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  /* Text styling with highlighted key phrases */
+  .about-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Highlight important phrases */
+  .highlight-text {
+    font-weight: 600;
+    color: #f56c6c;  /* SafeTrade's red color */
+  }
+  
+  /* Image container and layout */
+  .about-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  /* Styling for images with hover effect */
+  .about-image {
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for images */
+  .about-image:hover {
+    transform: scale(1.05);  /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Increased shadow on hover */
+  }
+  
+  /* General Mobile Adjustments */
+  @media (max-width: 768px) {
+    /* Adjust header size */
+    .about-title {
+      font-size: 1.8rem;  /* Even smaller header size for mobile */
+      margin-bottom: 10px;  /* Less margin */
+    }
+  
+    /* Smaller text size and tighter line height */
+    .about-text {
+      font-size: 1.1rem;  /* Smaller body text */
+      line-height: 1.4;   /* Tighter text */
+      margin-bottom: 25px;  /* Reduce text margin */
+    }
+  
+    /* Image container for mobile with side-by-side layout */
+    .about-images {
+      display: flex;
+      flex-direction: row;  /* Keep the images in a row */
+      justify-content: space-between;  /* Space between the images */
+      gap: 10px;  /* Smaller gap between images */
+    }
+  
+    /* Smaller images with more compact layout */
+    .about-image {
+      width: 48%;  /* Make the images smaller but side by side */
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);  /* Lighter shadow for mobile */
+    }
+  
+    /* Compact padding to reduce white space */
+    .about-section {
+      padding: 30px 10px;  /* Even smaller padding for compact layout */
+    }
+  }
+  
+  
+
+  import React from 'react';
+import { Navbar, Nav, Button, Container } from 'react-bootstrap';
+import logo from '../assets/logo.png';  // Import the logo
+import LoginModal from './LoginModal';  // Import the login modal
+
+function Header() {
+  return (
+    <Navbar expand="lg" style={{ backgroundColor: '#333' }} variant="dark" sticky="top">
+      <Container>
+        <Navbar.Brand href="#">
+          <img src={logo} alt="SafeTrade Logo" width="50" height="40" className="d-inline-block align-center" /> SafeTrade
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#about">About Us</Nav.Link>
+            <Nav.Link href="#services">Services</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+          </Nav>
+          <Nav>
+            {/* Login Modal Button */}
+            <LoginModal />
+            <Button variant="outline-light" href="#signup" className="ms-2">
+              Sign Up
+            </Button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
+export default Header;

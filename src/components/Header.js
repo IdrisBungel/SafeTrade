@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 import logo from '../assets/logo.png';
+import LoginModal from './LoginModal';  // Ensure the correct import path for LoginModal
 
 function Header() {
   const [sticky, setSticky] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +36,16 @@ function Header() {
             <Nav.Link href="#contact" className="header-link">Contact</Nav.Link>
           </Nav>
           <Nav>
+            {/* Sign Up Button */}
             <Button variant="outline-primary" href="#signup" className="me-2">Sign Up</Button>
-            <Button variant="primary" href="#login">Login</Button>
+            
+            {/* Login Button to Trigger Modal */}
+            <Button variant="primary" onClick={() => setShowLoginModal(true)}>
+              Login
+            </Button>
+
+            {/* Render the LoginModal Component */}
+            <LoginModal show={showLoginModal} handleClose={() => setShowLoginModal(false)} />
           </Nav>
         </Navbar.Collapse>
       </Container>

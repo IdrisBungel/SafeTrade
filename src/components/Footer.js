@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';  // Importing social icons
 
 function Footer() {
   return (
@@ -15,14 +17,32 @@ function Footer() {
             </ul>
           </Col>
           <Col md={4}>
-            <h5>Operating Hours</h5>
-            <p>Mon-Fri: 9am - 6pm</p>
+            <h5>Quick Links</h5>
+            <ul className="footer-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
           </Col>
           <Col md={4}>
-            <h5>Follow Us</h5>
-            <p>Social media links (optional)</p>
-          </Col>
+  <h5>Social Media</h5>
+  <p className="social-text">Follow us on social media:</p> {/* Text with social-text class */}
+  <div className="social-icons">
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faFacebookF} />
+    </a>
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faTwitter} />
+    </a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faLinkedinIn} />
+    </a>
+  </div>
+</Col>
+
         </Row>
+        {/* Line separator */}
+        <div className="footer-line"></div>
         <Row className="text-center">
           <Col md={12}>
             <p>© 2024 SafeTrade. All rights reserved.</p>
