@@ -34,9 +34,9 @@ function Header() {
   return (
     <Navbar expand="lg" className={`header-navbar ${sticky ? 'sticky' : ''}`} variant="light" sticky="top">
       <Container>
-        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
+        <Navbar.Brand as={Link} to="/#home" className="d-flex align-items-center">
           <img src={logo} alt="SafeTrade Logo" className="logo-img" />
-          <span className="ms-2">SafeTrade</span>
+          {/* <span className="ms-2">SafeTrade</span> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -49,12 +49,10 @@ function Header() {
           </Nav>
           <Nav className="d-flex">
             {/* Login and Sign Up buttons */}
-            <Button as={Link} to="/signup" variant="outline-primary" className="me-2 d-lg-inline-block">
-              Sign Up
-            </Button>
-            <Button variant="primary" onClick={() => setShowLoginModal(true)} className="d-lg-inline-block">
-              Login
-            </Button>
+            <div className="btn-container">
+  <Button as={Link} to="/signup" variant="outline-primary" className="me-2">Sign Up</Button>
+  <Button variant="primary" onClick={() => setShowLoginModal(true)}>Login</Button>
+</div>
           </Nav>
         </Navbar.Collapse>
         {/* Login Modal */}

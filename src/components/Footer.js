@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';  // Importing social icons
+import { faFacebookF, faTwitter, faLinkedinIn, faTiktok, faInstagram } from '@fortawesome/free-brands-svg-icons';  // Importing social icons
+import { faX } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
   return (
@@ -32,10 +33,13 @@ function Footer() {
       <FontAwesomeIcon icon={faFacebookF} />
     </a>
     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-      <FontAwesomeIcon icon={faTwitter} />
+      <FontAwesomeIcon icon={faX} />
     </a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-      <FontAwesomeIcon icon={faLinkedinIn} />
+    <a href="https://Instagram.com" target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faInstagram} />
+    </a>
+    <a href="https://Tiktok.com" target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faTiktok} />
     </a>
   </div>
 </Col>

@@ -61,6 +61,7 @@ function SignupPage() {
             <div className="signup-form-col">
               {/* First Name Input */}
               <Form.Group controlId="formFirstName" className="mb-3">
+              <FontAwesomeIcon icon={faUser} className="input-icon" />
                 <Form.Label>First Name(s)</Form.Label>
                 <div className="input-with-icon">
                   <Form.Control 
@@ -71,7 +72,7 @@ function SignupPage() {
                     onChange={handleChange}
                     isInvalid={!!formErrors.firstName}
                   />
-                  <FontAwesomeIcon icon={faUser} className="input-icon" />
+                  
                 </div>
                 <Form.Control.Feedback type="invalid">{formErrors.firstName}</Form.Control.Feedback>
               </Form.Group>
